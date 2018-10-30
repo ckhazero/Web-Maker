@@ -1,13 +1,13 @@
 <!--NAV-->
 <div>
   <nav class="fixed-top navbar navbar-light pagedit">        
-      <a class="navbar-brand float-left" href="../website-pages/website-list.html">
+      <a class="navbar-brand float-left" routerLink="/user/:uid/website">
           <i class="fas fa-chevron-left ibangkulay"></i>
       </a>
-          <div class="left90 ibangkulay">
+          <div class="left90 ibangkulay" routerLink="/user/:uid/website/:wid/page">
               <b>Pages</b>
           </div>
-      <a href="page-new.html">
+      <a routerLink="/user/:uid/website/:wid/page/new">
           <i class="fas fa-plus-square float-right ibangkulay"></i>
       </a>
   </nav>
@@ -18,22 +18,22 @@
 <div>    
   <ul class="list-group container">
       <br>
-      <li class=list-group-item><a href="../widget-pages/widget-list.html">Blog Post</a>
-          <a href="page-edit.html" class="float-right"><i class="fas fa-cog ibangkulay"></i></a></li>
-      <li class=list-group-item><a href="../widget-pages/widget-list.html">Blogs</a>
-          <a href="page-edit.html" class=float-right><i class="fas fa-cog ibangkulay"></i></a></li>
-      <li class=list-group-item><a href="../widget-pages/widget-list.html">Home</a>
-          <a href="page-edit.html" class="float-right"><i class="fas fa-cog ibangkulay"></i></a></li>
-      <li class=list-group-item><a href="../widget-pages/widget-list.html">About</a>
-          <a href="page-edit.html" class="float-right"><i class="fas fa-cog ibangkulay"></i></a></li>
-      <li class=list-group-item><a href="../widget-pages/widget-list.html">Contact Us</a>
-              <a href="page-edit.html" class="float-right"><i class="fas fa-cog ibangkulay"></i></a></li>
+      <li class=list-group-item><a routerLink="/user/:uid/website/:wid/page/:pid/widget">Blog Post</a>
+          <a routerLink="/user/:uid/website/:wid/page/:pid" class="float-right"><i class="fas fa-cog ibangkulay"></i></a></li>
+      <li class=list-group-item><a routerLink="/user/:uid/website/:wid/page/:pid/widget">Blogs</a>
+          <a routerLink="/user/:uid/website/:wid/page/:pid" class=float-right><i class="fas fa-cog ibangkulay"></i></a></li>
+      <li class=list-group-item><a routerLink="/user/:uid/website/:wid/page/:pid/widget">Home</a>
+          <a routerLink="/user/:uid/website/:wid/page/:pid" class="float-right"><i class="fas fa-cog ibangkulay"></i></a></li>
+      <li class=list-group-item><a routerLink="/user/:uid/website/:wid/page/:pid/widget">About</a>
+          <a routerLink="/user/:uid/website/:wid/page/:pid" class="float-right"><i class="fas fa-cog ibangkulay"></i></a></li>
+      <li class=list-group-item><a routerLink="/user/:uid/website/:wid/page/:pid/widget">Contact Us</a>
+          <a routerLink="/user/:uid/website/:wid/page/:pid" class="float-right"><i class="fas fa-cog ibangkulay"></i></a></li>
   </ul>
 </div>
 <!--FOOTER-->
 <nav class="navbar navbar-light pagedit fixed-bottom">
   <div class="usogbaba">
-      <a class="float-right" href="../user-pages/profile.html">
+      <a class="float-right" routerLink="/user/:uid">
           <i class="fas fa-user ibangkulay"></i>
       </a>
   </div>
