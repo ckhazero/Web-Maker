@@ -1,7 +1,7 @@
 <div>
   <nav class="navbar navbar-light navtaas">                          
-      <a class="justify-content-center putinglogo" href="#"><b>Profile</b></a>
-      <a class ="putinglogo float-right" href="profile.html"><i class="fas fa-check"></i></a>
+      <a class="justify-content-center putinglogo" routerLink="/user/:uid"><b>Profile</b></a>
+      <a class ="putinglogo float-right" routerLink="/user/:uid"><i class="fas fa-check"></i></a>
   </nav>    
 </div>
 <br>
@@ -26,11 +26,11 @@
       </div>    
 <!--BUTTONS-->
       <div>
-          <a href="../website-pages/website-list.html" id="allreg" class="container btn btn-block">Website<a>
+          <a routerLink="/user/:uid/website" id="allreg" class="container btn btn-block">Website</a>
       </div>
       <br>
       <div>
-          <a href="login.html" class="container kans btn btn-block">Log Out</a>
+          <a routerLink="/login" class="container kans btn btn-block">Log Out</a>
       </div>
   </form>
 </div>
@@ -38,7 +38,7 @@
 <div>
   <nav class="navbar navbar-light navtaas fixed-bottom">
       <div class="usogbaba">
-          <a class="float-right" href="profile.html"><i class="fas fa-user putinglogo"></i></a>
+          <a class="float-right" routerLink="/user/:uid"><i class="fas fa-user putinglogo"></i></a>
       </div>
   </nav>               
 </div>

@@ -2,15 +2,15 @@
     <nav class="navbar navbar-light navtaas row">  
       <!--LEFT NAV--> 
           <div class="col-4 d-none d-lg-block">
-              <a href="website-list.html"><i class="fas fa-chevron-left putinglogo"></i></a>
-              <a class="putinglogo padsaleft" href="#"><b>Websites</b></a>
-              <a class="putinglogo float-right" href="website-new.html"><i class="fas fa-plus-square"></i></a>
+              <a routerLink="/user/:uid/website"><i class="fas fa-chevron-left putinglogo"></i></a>
+              <a class="putinglogo padsaleft" routerLink="/user/:uid/website/:wid"><b>Websites</b></a>
+              <a class="putinglogo float-right" routerLink="/user/:uid/website/new"><i class="fas fa-plus-square"></i></a>
           </div>
       <!--RIGHT NAV-->
           <div class="col-lg-8">
-                  <a class="d-lg-none" href="../user-pages/profile.html"><i class="fas fa-chevron-left putinglogo"></i></a>
-                  <a class="putinglogo" href="#"><b>New Website</b></a>
-                  <a class="float-right putinglogo" href="website-list.html"><i class="fas fa-check"></i></a></a>
+                  <a class="d-lg-none" routerLink="/user/:uid/website"><i class="fas fa-chevron-left putinglogo"></i></a>
+                  <a class="putinglogo" routerLink="/user/:uid/website/:wid"><b>Edit Website</b></a>
+                  <a class="float-right putinglogo" routerLink="/user/:uid/website"><i class="fas fa-check"></i></a>
           </div>
       </nav>
   <!--LIST & FORM-->
@@ -20,14 +20,14 @@
       <div class="col-4 d-none d-sm-block">
           <div class="container-fluid">
               <ul class="list-group container">                        
-                      <li class=list-group-item><a href="../page-pages/page-list.html">Address Book App</a>
-                          <a href="website-edit.html" class="float-right"><i class="fas fa-cog"></i></a></li>
-                      <li class=list-group-item><a href="../page-pages/page-list.html">Blogger</a>
-                          <a href="website-edit.html" class=float-right><i class="fas fa-cog"></i></a></li>
-                      <li class=list-group-item><a href="../page-pages/page-list.html">Blogging App</a>
-                          <a href="website-edit.html" class="float-right"><i class="fas fa-cog"></i></a></li>
-                      <li class=list-group-item><a href="../page-pages/page-list.html">Script Testing App</a>
-                          <a href="website-edit.html" class="float-right"><i class="fas fa-cog"></i></a></li>
+                      <li class=list-group-item><a routerLink="/user/:uid/website/:wid/page">Address Book App</a>
+                          <a routerLink="/user/:uid/website/:wid" class="float-right"><i class="fas fa-cog"></i></a></li>
+                      <li class=list-group-item><a routerLink="/user/:uid/website/:wid/page">Blogger</a>
+                          <a routerLink="/user/:uid/website/:wid" class=float-right><i class="fas fa-cog"></i></a></li>
+                      <li class=list-group-item><a routerLink="/user/:uid/website/:wid/page">Blogging App</a>
+                          <a routerLink="/user/:uid/website/:wid" class="float-right"><i class="fas fa-cog"></i></a></li>
+                      <li class=list-group-item><a routerLink="/user/:uid/website/:wid/page">Script Testing App</a>
+                          <a routerLink="/user/:uid/website/:wid"class="float-right"><i class="fas fa-cog"></i></a></li>
               </ul>
           </div>            
       </div>
@@ -45,13 +45,13 @@
                       <textarea id="description" rows="5" class="form-control" type="text" placeholder="Website Description"></textarea>        
                   </div>
                   <br>                                                                    
-                  <a class="container btn btn-block btn-lg pula" href="website-list.html">Delete</a>                    
+                  <a routerLink="/user/:uid/website" class="container btn btn-block btn-lg pula" href="website-list.html">Delete</a>                    
               </form>
           </div>
       </div>
       <!--FOOTER-->         
       <nav class="navbar navbar-light navtaas fixed-bottom">
               <div class="usogbaba">
-              <a class="float-right" href="../user-pages/profile.html"><i class="fas fa-user putinglogo"></i></a>
+              <a class="float-right" routerLink="/user/:uid"><i class="fas fa-user putinglogo"></i></a>
               </div>
           </nav>    
