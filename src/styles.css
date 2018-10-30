@@ -1,0 +1,43 @@
+.logbutt {background-color:#368BC1;
+    color:white;}
+.gitna {text-align: center;}
+#allreg {background-color:#307D7E;color:white;}
+.kans {background-color:#837E7C; color:white}
+.putinglogo{color:white;}
+.berdelogo {color:#B1CCA8;}
+.abologo {color:grey}
+.gitnato{display:inline-block;
+  }
+.navtaas{background-color:#3090C7;}
+.usogbaba{
+    width:100%;
+}
+.pula {background-color: #C24641;
+    color:white
+    }
+.pagedit {background-color:#EBF4FA;}
+.ibangkulay{color:#2B547E;}
+.picgitna{display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 62%;}
+.extdown {height: 50px;}
+.ytadjust {position: relative;
+padding-bottom: 56.25%;padding-top: 25px;
+height: 0;}
+.adjicon {position: relative;
+    top:20px;}
+.adjkanan {position: relative;
+right:1170px;}
+.adjkanan2 {position: relative;
+    right:1150px;}
+.usogtaas {width: 95%}
+.iconpadd {padding-left: 10px}
+.posicon {position: absolute;
+            right: 10px;
+        z-index:2;}
+.icgold {color:gold;}
+.icsil {color:silver;}
+a:hover {
+    text-decoration: none;
+}
