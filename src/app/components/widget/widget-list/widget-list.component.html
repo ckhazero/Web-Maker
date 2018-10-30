@@ -1,13 +1,13 @@
 <!--NAVBAR-->
 <div class="container-fluid">
   <nav class="fixed-top navbar navbar-light pagedit">        
-      <a class="navbar-brand float-left" href="../page-pages/page-list.html">
+      <a class="navbar-brand float-left" routerLink="/user/:uid/website/:wid/page">
           <i class="fas fa-chevron-left ibangkulay"></i>
       </a>
-          <div class="left90 ibangkulay">
+          <div class="left90 ibangkulay" routerLink="/user/:uid/website/:wid/page/:pid/widget">
               <b>Widget List</b>
           </div>
-      <a href="widget-chooser.html">
+      <a routerLink="/user/:uid/website/:wid/page/:pid/widget/new">
           <i class="fas fa-plus-square float-right ibangkulay"></i>
       </a>
   </nav>
@@ -18,16 +18,16 @@
 <!--CONTENTS-->
 <div>    
 <div class="posicon">
-  <a href="widget-heading.html"><i class="fas fa-cog icgold"></i></a>
-  <i class="fas fa-th-list icsil"></i>
+  <a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid"><i class="fas fa-cog icgold"></i></a>
+  <i routerLink="/user/:uid/website/:wid/page/:pid/widget" class="fas fa-th-list icsil"></i>
 </div>                    
 <div class="pula gitna">
   <h1>UMALOHOKAN</h1>
 </div>      
 <br>
 <div class="posicon">
-  <a href="widget-heading.html"><i class="fas fa-cog icgold"></i></a>
-  <i class="fas fa-th-list icsil"></i>
+  <a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid"><i class="fas fa-cog icgold"></i></a>
+  <i routerLink="/user/:uid/website/:wid/page/:pid/widget" class="fas fa-th-list icsil"></i>
 </div>
 <div class="gitna">
   <h3>27 Amazing Places To Visit In The Philippines In 2018</h3>
@@ -35,16 +35,16 @@
 <br>
 <!--IMAGE IS HERE-->
 <div class="posicon">
-  <a href="widget-image.html"><i class="fas fa-cog icgold"></i></a>
-  <i class="fas fa-th-list icsil"></i>                
+  <a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid"><i class="fas fa-cog icgold"></i></a>
+  <i routerLink="/user/:uid/website/:wid/page/:pid/widget" class="fas fa-th-list icsil"></i>                
 </div>
 <div class="gitna">
   <img class="img-fluid" src="https://images.trekeffect.com/blog-trekeffect/2016/01/GettyImages-578068546.png">
 </div>
 <br>
 <div class="posicon">
-  <a href="widget-heading.html"><i class="fas fa-cog icgold"></i></a>
-  <i class="fas fa-th-list icsil"></i>            
+  <a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid"><i class="fas fa-cog icgold"></i></a>
+  <i routerLink="/user/:uid/website/:wid/page/:pid/widget" class="fas fa-th-list icsil"></i>            
 </div>
 <div class="gitna">
   <h5>
@@ -57,8 +57,8 @@
 </div>
 <br>
 <div class="posicon">
-  <a href="widget-heading.html"><i class="fas fa-cog icgold"></i></a>
-  <i class="fas fa-th-list icsil"></i>
+  <a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid"><i class="fas fa-cog icgold"></i></a>
+  <i routerLink="/user/:uid/website/:wid/page/:pid/widget" class="fas fa-th-list icsil"></i>
 </div>
 <div class="gitna">
   <h3>Young Love, Complicated by Cancer</h3>
@@ -66,16 +66,16 @@
 <br>
 <!--VIDEO IS HERE-->
 <div class="posicon">
-  <a href="widget-youtube.html"><i class="fas fa-cog icgold"></i></a>
-  <i class="fas fa-th-list icsil"></i>                
+  <a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid"><i class="fas fa-cog icgold"></i></a>
+  <i routerLink="/user/:uid/website/:wid/page/:pid/widget" class="fas fa-th-list icsil"></i>                
 </div>
 <div class="embed-responsive embed-responsive-21by9 gitna">
   <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/9ItBvH5J6ss?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
 <br>
 <div class="posicon">
-  <a href="widget-heading.html"><i class="fas fa-cog icgold"></i></a>
-  <i class="fas fa-th-list icsil"></i>               
+  <a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid"><i class="fas fa-cog icgold"></i></a>
+  <i routerLink="/user/:uid/website/:wid/page/:pid/widget" class="fas fa-th-list icsil"></i>               
 </div>
 <div class="gitna">
   <h5>
@@ -94,7 +94,7 @@
   <div class="usogbaba">
       <i class="fas fa-play gitnato float-left ibangkulay"></i>
       <i class="iconpadd float-left far fa-eye gitnato ibangkulay"></i>
-      <a class href="../user-pages/profile.html"><i class="float-right fas fa-user ibangkulay"></i></a>
+      <a class routerLink="/user/:uid"><i class="float-right fas fa-user ibangkulay"></i></a>
   </div>
 </nav>
 </div>     
