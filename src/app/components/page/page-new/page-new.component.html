@@ -1,9 +1,9 @@
    <!--NAV-->
    <div>
     <nav class="navbar pagedit">            
-        <a href="page-list.html"><i class="fas fa-chevron-left ibangkulay"></i></a>
-        <a class="ibangkulay" href="#"><b>New Page</b></a>
-        <a class="float-right ibangkulay" href="page-list.html"><i class="fas fa-check"></i></a>
+        <a routerLink="/user/:uid/website/:wid/page"><i class="fas fa-chevron-left ibangkulay"></i></a>
+        <a class="ibangkulay" routerLink="/user/:uid/website/:wid/page/new"><b>New Page</b></a>
+        <a class="float-right ibangkulay" routerLink="/user/:uid/website/:wid/page"><i class="fas fa-check"></i></a>
     </nav>
 </div>
 <br>
@@ -24,7 +24,7 @@
 <div>
     <nav class="navbar navbar-light pagedit fixed-bottom">
         <div class="usogbaba">
-            <a class="float-right" href="../user-pages/profile.html">
+            <a class="float-right" routerLink="/user/:uid">
                 <i class="fas fa-user ibangkulay"></i>
             </a>
         </div>
