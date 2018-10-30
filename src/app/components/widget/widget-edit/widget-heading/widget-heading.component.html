@@ -2,9 +2,9 @@
   <!--NAV-->
   <div>
       <nav class="navbar pagedit">            
-          <a href="widget-list.html"><i class="fas fa-chevron-left ibangkulay"></i></a>
-          <a class="ibangkulay" href="#"><b>Widget Edit</b></a>
-          <a class="float-right ibangkulay" href="widget-list.html"><i class="fas fa-check"></i></a>
+          <a routerLink="/user/:uid/website/:wid/page/:pid/widget"><i class="fas fa-chevron-left ibangkulay"></i></a>
+          <a class="ibangkulay" routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid"><b>Widget Edit</b></a>
+          <a class="float-right ibangkulay" routerLink="/user/:uid/website/:wid/page/:pid/widget"><i class="fas fa-check"></i></a>
       </nav>
   </div>
   <br>
@@ -26,7 +26,7 @@
           <br>
   <!--BUTTON-->
           <div class="container">                                                                    
-              <a class="btn btn-block btn-lg pula" href="widget-list.html">Delete</a>
+              <a class="btn btn-block btn-lg pula" routerLink="/user/:uid/website/:wid/page/:pid/widget">Delete</a>
           </div>
       </form>
 </div>
@@ -34,7 +34,7 @@
 <div>                 
   <nav class="navbar navbar-light pagedit fixed-bottom">
       <div class="usogbaba ibangkulay">
-          <a class="float-right" href="../user-pages/profile.html">
+          <a class="float-right" routerLink="/user/:uid">
               <i class="fas fa-user ibangkulay"></i>
           </a>
       </div>

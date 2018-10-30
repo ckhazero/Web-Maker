@@ -1,8 +1,8 @@
 <div>
   <div>
       <nav class="fixed-top navbar navbar-light pagedit">        
-          <a class="ibangkulay" href="widget-list.html">
-              <i class="fas fa-chevron-left"></i>
+          <a class="ibangkulay" routerLink="/user/:uid/website/:wid/page/:pid/widget/new">
+              <i class="fas fa-chevron-left" routerLink="/user/:uid/website/:wid/page/:pid/widget"></i>
                   <b>Choose Widget</b>
           </a>                    
       </nav>
@@ -13,16 +13,16 @@
 <div>
 <br>  
   <ul class="list-group container">           
-      <li class=list-group-item><a href="widget-heading.html">Header</a></li>
-      <li class=list-group-item><a href="#">Label</a></li>
-      <li class=list-group-item><a href="#">HTML</a></li>
-      <li class=list-group-item><a href="#">Text Input</a></li>
-      <li class=list-group-item><a href="#">Link</a></li>
-      <li class=list-group-item><a href="#">Button</a></li>
-      <li class=list-group-item><a href="widget-image.html">Image</a></li>
-      <li class=list-group-item><a href="widget-youtube.html">Youtube</a></li>
-      <li class=list-group-item><a href="#">Data Table</a></li>
-      <li class=list-group-item><a href="#">Repeater</a></li>
+      <li class=list-group-item><a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid">Header</a></li>
+      <li class=list-group-item><a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid">Label</a></li>
+      <li class=list-group-item><a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid">HTML</a></li>
+      <li class=list-group-item><a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid">Text Input</a></li>
+      <li class=list-group-item><a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid">Link</a></li>
+      <li class=list-group-item><a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid">Button</a></li>
+      <li class=list-group-item><a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid">Image</a></li>
+      <li class=list-group-item><a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid">Youtube</a></li>
+      <li class=list-group-item><a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid">Data Table</a></li>
+      <li class=list-group-item><a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid">Repeater</a></li>
   </ul>
 </div>
 </div>
@@ -30,7 +30,7 @@
 <div>
 <nav class="navbar navbar-light pagedit fixed-bottom">
   <div class="usogbaba">
-      <a class="float-right" href="../user-pages/profile.html">
+      <a class="float-right" routerLink="/user/:uid">
           <i class="fas fa-user ibangkulay"></i>
       </a>
   </div>
