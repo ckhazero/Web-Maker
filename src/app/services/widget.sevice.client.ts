@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 // injecting service into module
 
 @Injectable()
-export class PageService {
+export class WidgetService {
     widgets = [
 
         { _id: "123", widgetType: "HEADING", pageId: "321", size: 2, text: "GIZMODO"},

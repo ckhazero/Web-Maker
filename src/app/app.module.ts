@@ -20,6 +20,8 @@ import { WidgetImageComponent } from './components/widget/widget-edit/widget-ima
 import { WidgetYoutubeComponent } from './components/widget/widget-edit/widget-youtube/widget-youtube.component';
 import { UserService } from "./services/user.service.client"
 import { WebsiteService } from './services/website.service.client';
+import { PageService } from './services/page.service.client';
+import { WidgetService } from './services/widget.sevice.client';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,7 @@ import { WebsiteService } from './services/website.service.client';
     WidgetYoutubeComponent
   ],
   imports: [BrowserModule, Routing],
-  providers: [UserService, WebsiteService],
+  providers: [UserService, WebsiteService, PageService, WidgetService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
