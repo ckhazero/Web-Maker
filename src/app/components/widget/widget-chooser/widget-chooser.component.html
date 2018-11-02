@@ -1,17 +1,18 @@
-<div>
-  <div>
-      <nav class="fixed-top navbar navbar-light pagedit">        
-          <a class="ibangkulay" routerLink="/user/:uid/website/:wid/page/:pid/widget/new">
-              <i class="fas fa-chevron-left" routerLink="/user/:uid/website/:wid/page/:pid/widget"></i>
+<div>  
+      <nav class="fixed-top navbar navbar-light navtaas">        
+        <a class="navbar-brand float-left" routerLink="/user/:uid/website/:wid/page/:pid/widget">
+            <i class="fas fa-chevron-left putinglogo"></i>
+        </a>
+              <div class="left90 ibangkulay" routerLink="/user/:uid/website/:wid/page/:pid/widget/new">
                   <b>Choose Widget</b>
-          </a>                    
+              </div>                           
       </nav>
 </div>
 <br>
 <br>
+<br>
 <!--LIST STARTS HERE-->
 <div>
-<br>  
   <ul class="list-group container">           
       <li class=list-group-item><a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid">Header</a></li>
       <li class=list-group-item><a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid">Label</a></li>
@@ -25,14 +26,11 @@
       <li class=list-group-item><a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid">Repeater</a></li>
   </ul>
 </div>
-</div>
 <!--FOOTER-->
-<div>
 <nav class="navbar navbar-light pagedit fixed-bottom">
   <div class="usogbaba">
       <a class="float-right" routerLink="/user/:uid">
           <i class="fas fa-user ibangkulay"></i>
       </a>
   </div>
-</nav>
-</div>         
+</nav>     
