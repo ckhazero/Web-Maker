@@ -1,12 +1,12 @@
 <div>
   <nav class="fixed-top navbar navbar-light navtaas">        
-      <a class="navbar-brand float-left" routerLink="/user/:uid">
+      <a class="navbar-brand float-left" routerLink="/user/{{uid}}">
           <i class="fas fa-chevron-left putinglogo"></i>
       </a>
-          <div class="left90 putinglogo" routerLink="/user/:uid/website">
+          <div class="left90 putinglogo" routerLink="/user/{{uid}}/website">
               <b>Websites</b>
           </div>
-      <a routerLink="/user/:uid/website/new">
+      <a routerLink="/user/{{uid}}/website/new">
           <i class="fas fa-plus-square float-right putinglogo"></i>
       </a>
   </nav>
@@ -17,22 +17,16 @@
 <div>    
   <ul class="list-group container">
       <br>
-      <li class="list-group-item">
-          <a routerLink="/user/:uid/website/:wid/page">Address Book App</a>
-          <a routerLink="/user/:uid/website/:wid/page" class="float-right"><i class="fas fa-cog"></i></a>
-      </li>
-      <li class="list-group-item"><a routerLink="/user/:uid/website/:wid/page">Blogger</a>
-          <a routerLink="/user/:uid/website/:wid/page" class=float-right><i class="fas fa-cog"></i></a></li>
-      <li class="list-group-item"><a routerLink="/user/:uid/website/:wid/page">Blogging App</a>
-          <a routerLink="/user/:uid/website/:wid/page" class="float-right"><i class="fas fa-cog"></i></a></li>
-      <li class="list-group-item"><a routerLink="/user/:uid/website/:wid/page">Script Testing App</a>
-          <a routerLink="/user/:uid/website/:wid/page" class="float-right"><i class="fas fa-cog"></i></a></li>
+      <li class="list-group-item" *ngFor = "let website of websites">
+          <a routerLink="/user/{{uid}}/website/{{website._id}}/page">{{website.name}}</a>
+          <a routerLink="/user/{{uid}}/website/{{website._id}}" class="float-right"><i class="fas fa-cog"></i></a>
+      </li>      
   </ul>
 </div>
 <!--FOOTER-->
 <nav class="navbar navbar-light navtaas fixed-bottom">
   <div class="usogbaba">
-      <a class="float-right" routerLink="/user/:uid">
+      <a class="float-right" routerLink="/user/{{uid}}">
           <i class="fas fa-user putinglogo"></i>
       </a>
   </div>

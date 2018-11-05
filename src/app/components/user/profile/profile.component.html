@@ -1,6 +1,6 @@
 <div>
   <nav class="navbar navbar-light navtaas">                          
-      <a class="justify-content-center putinglogo" routerLink="/user/:uid"><b>Profile</b></a>
+      <a class="justify-content-center putinglogo" routerLink="/user/{{uid}}"><b>Profile</b></a>
       <button [disabled]="myForm.invalid" class ="btn bg-transparent putinglogo float-right" type="submit" form="myForm"><i class="fas fa-check"></i></button>
   </nav>    
 </div>
@@ -29,7 +29,7 @@
       </div>    
 <!--BUTTONS-->
       <div>
-          <a routerLink="/user/:uid/website" id="allreg" class="container btn btn-block">Website</a>
+          <a routerLink="/user/{{uid}}/website" id="allreg" class="container btn btn-block">Website</a>
       </div>
       <br>
       <div>
@@ -41,7 +41,7 @@
 <div>
   <nav class="navbar navbar-light navtaas fixed-bottom">
       <div class="usogbaba">
-          <a class="float-right" routerLink="/user/:uid"><i class="fas fa-user putinglogo"></i></a>
+          <a class="float-right" routerLink="/user/{{uid}}"><i class="fas fa-user putinglogo"></i></a>
       </div>
   </nav>               
 </div>
