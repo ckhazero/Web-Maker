@@ -41,3 +41,7 @@ right:1170px;}
 a:hover {
     text-decoration: none;
 }
+
+.bg-transparent {
+    background: transparent;
+}

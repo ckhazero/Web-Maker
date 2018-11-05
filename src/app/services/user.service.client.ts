@@ -65,8 +65,8 @@ users = [
     }
 }
 
-  updateUser(userId, user) {
-      const oldUser = this.findUserById(userId._id);
+  updateUser(user) {
+      const oldUser = this.findUserById(user._id);
       const index = this.users.indexOf(oldUser);
       this.users[index] = user;
    }
