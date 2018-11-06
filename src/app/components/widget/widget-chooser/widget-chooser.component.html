@@ -1,9 +1,9 @@
 <div>  
       <nav class="fixed-top navbar navbar-light navtaas">        
-        <a class="navbar-brand float-left" routerLink="/user/:uid/website/:wid/page/:pid/widget">
+        <a class="navbar-brand float-left" routerLink="/user/{{uid}}/website/{{wid}}/page/{{pid}}/widget">
             <i class="fas fa-chevron-left putinglogo"></i>
         </a>
-              <div class="left90 ibangkulay" routerLink="/user/:uid/website/:wid/page/:pid/widget/new">
+              <div class="left90 ibangkulay" routerLink="/user/{{uid}}/website/{{wid}}/page/{{pid}}/widget/new">
                   <b>Choose Widget</b>
               </div>                           
       </nav>
@@ -14,22 +14,22 @@
 <!--LIST STARTS HERE-->
 <div>
   <ul class="list-group container">           
-      <li class=list-group-item><a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid">Header</a></li>
-      <li class=list-group-item><a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid">Label</a></li>
-      <li class=list-group-item><a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid">HTML</a></li>
-      <li class=list-group-item><a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid">Text Input</a></li>
-      <li class=list-group-item><a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid">Link</a></li>
-      <li class=list-group-item><a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid">Button</a></li>
-      <li class=list-group-item><a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid">Image</a></li>
-      <li class=list-group-item><a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid">Youtube</a></li>
-      <li class=list-group-item><a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid">Data Table</a></li>
-      <li class=list-group-item><a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid">Repeater</a></li>
+      <li class=list-group-item><span (click)="create('HEADER')" class="pointer">Header</span></li>
+      <li class=list-group-item><a>Label</a></li>
+      <li class=list-group-item><a>HTML</a></li>
+      <li class=list-group-item><a>Text Input</a></li>
+      <li class=list-group-item><a>Link</a></li>
+      <li class=list-group-item><a>Button</a></li>
+      <li class=list-group-item><span (click)="create('IMAGE')" class="pointer">Image</span></li>
+      <li class=list-group-item><span (click)="create('YOUTUBE')" class="pointer">Youtube</span></li>
+      <li class=list-group-item><a>Data Table</a></li>
+      <li class=list-group-item><a>Repeater</a></li>
   </ul>
 </div>
 <!--FOOTER-->
 <nav class="navbar navbar-light pagedit fixed-bottom">
   <div class="usogbaba">
-      <a class="float-right" routerLink="/user/:uid">
+      <a class="float-right" routerLink="/user/{{uid}}">
           <i class="fas fa-user ibangkulay"></i>
       </a>
   </div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { WidgetService } from 'src/app/services/widget.sevice.client';
 
 @Component({
   selector: 'app-widget-heading',
@@ -6,10 +8,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./widget-heading.component.css']
 })
 export class WidgetHeadingComponent implements OnInit {
+  uid: string;
+  wid: string;
+  pid: string;
+  wgid: string;
+  widget: any;
 
-  constructor() { }
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private router: Router,
+    private widgetService: WidgetService
+  ) { }
 
   ngOnInit() {
+    this.activatedRoute.params.subscribe(params => {
+      this.uid = params["uid"];
+      this.wid = params["wid"];
+      this.pid = params["pid"];
+      this.wgid = params ["wgid"];
+      this.widget = this.widgetService.findWidgetById(this.wgid);
+    });
   }
+
+  update(){}
+
+  delete(){}
 
 }

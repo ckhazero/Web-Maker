@@ -11,16 +11,16 @@ export class WidgetService {
       
         { _id: "234", widgetType: "HEADING", pageId: "321", size: 4, text: "Lorem ipsum"},
       
-        { _id: "345", widgetType: "IMAGE", pageId: "321", width: "100%", url: "http://lorempixel.com/400/200/"},
+        { _id: "345", widgetType: "IMAGE", pageId: "321", width: "50%", url: "https://www.w3schools.com/w3css/img_lights.jpg"},
       
          { _id: "567", widgetType: "HEADING", pageId: "321", size: 4, text: "Lorem ipsum"},
       
-        { _id: "678", widgetType: "YOUTUBE", pageId: "321", width: "100%", url: "https://youtu.be/AM2Ivdi9c4E" },
+        { _id: "678", widgetType: "YOUTUBE", pageId: "321", width: "65%", url: "https://youtu.be/AM2Ivdi9c4E" },
       
       ]
 
       createWidget(widget){
-          widget._id = Math.random.toString();
+          widget._id = Math.random().toString();
           this.widgets.push(widget);
           return widget;
       }
@@ -37,7 +37,7 @@ export class WidgetService {
 
       findWidgetById(widgetId){
           for (let i = 0; i < this.widgets.length; i++){
-              if ((widgetId = this.widgets[i]._id)){
+              if ((widgetId === this.widgets[i]._id)){
                   return this.widgets[i];
               }
           }

@@ -2,31 +2,31 @@
   <!--NAV-->
   <div>
       <nav class="navbar pagedit">            
-          <a routerLink="/user/:uid/website/:wid/page/:pid/widget"><i class="fas fa-chevron-left ibangkulay"></i></a>
-          <a class="ibangkulay" routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid"><b>Widget Edit</b></a>
-          <a class="float-right ibangkulay" routerLink="/user/:uid/website/:wid/page/:pid/widget"><i class="fas fa-check"></i></a>
+          <a routerLink="/user/{{uid}}/website/{{wid}}/page/{{pid}}/widget"><i class="fas fa-chevron-left ibangkulay"></i></a>
+          <a class="ibangkulay" routerLink="/user/{{uid}}/website/{{wid}}/page/{{pid}}/widget/{{wgid}}"><b>Widget Edit</b></a>
+          <button form="myForm" class="float-right ibangkulay btn bg-transparent"><i class="fas fa-check"></i></button>
       </nav>
   </div>
   <br>
   <!--FORM IS HERE-->
   <div class="container">
-      <form>
+      <form id="myForm" #myForm="ngForm" (ngSubmit)="update()">
           <div class="form-group">
               <label for="Name"><b>Name</b></label>
-              <input class="form-control" type="text" placeholder="Name" id="Name">
+              <input [(ngModel)]="widget.name" name="name" class="form-control" type="text" placeholder="Widget Name" id="name">
           </div>
           <div class="form-group">
               <label for="Text"><b>Text</b></label>
-              <input class="form-control" type="text" placeholder="Text" id="Text">    
+              <input [(ngModel)]="widget.text" name="text" class="form-control" type="text" placeholder="Widget Text" id="text">    
           </div>
           <div class="form-group">
               <label for="Size"><b>Size</b></label>
-              <input class="form-control" type="number" placeholder="size" id="Size">    
+              <input [(ngModel)]="widget.size" name="size" class="form-control" type="number" placeholder="Widget Size" id="size">    
           </div>
           <br>
   <!--BUTTON-->
           <div class="container">                                                                    
-              <a class="btn btn-block btn-lg pula" routerLink="/user/:uid/website/:wid/page/:pid/widget">Delete</a>
+              <button type="buton" (click)="delete()" class="btn btn-block btn-lg pula">Delete</button>
           </div>
       </form>
 </div>
@@ -34,7 +34,7 @@
 <div>                 
   <nav class="navbar navbar-light pagedit fixed-bottom">
       <div class="usogbaba ibangkulay">
-          <a class="float-right" routerLink="/user/:uid">
+          <a class="float-right" routerLink="/user/{{uid}}">
               <i class="fas fa-user ibangkulay"></i>
           </a>
       </div>

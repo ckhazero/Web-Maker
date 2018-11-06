@@ -1,13 +1,13 @@
 <!--NAVBAR-->
 <div class="container-fluid">
   <nav class="fixed-top navbar navbar-light pagedit">        
-      <a class="navbar-brand float-left" routerLink="/user/:uid/website/:wid/page">
+      <a class="navbar-brand float-left" routerLink="/user/{{uid}}/website/{{wid}}/page">
           <i class="fas fa-chevron-left ibangkulay"></i>
       </a>
-          <div class="left90 ibangkulay" routerLink="/user/:uid/website/:wid/page/:pid/widget">
+          <div class="left90 ibangkulay" routerLink="/user/{{uid}}/website/{{wid}}/page/{{pid}}/widget">
               <b>Widget List</b>
           </div>
-      <a routerLink="/user/:uid/website/:wid/page/:pid/widget/new">
+      <a routerLink="/user/{{uid}}/website/{{wid}}/page/{{pid}}/widget/new">
           <i class="fas fa-plus-square float-right ibangkulay"></i>
       </a>
   </nav>
@@ -16,85 +16,55 @@
 <br>
 <br>
 <!--CONTENTS-->
-<div>    
+      <!--Widgets-->
+<div *ngFor="let widget of widgets">    
 <div class="posicon">
-  <a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid"><i class="fas fa-cog icgold"></i></a>
-  <i routerLink="/user/:uid/website/:wid/page/:pid/widget" class="fas fa-th-list icsil"></i>
+  <a routerLink="/user/{{uid}}/website/{{wid}}/page/{{pid}}/widget/{{widget._id}}"><i class="fas fa-cog icgold"></i></a>
+  <i routerLink="/user/{{uid}}/website/{{wid}}/page/{{pid}}/widget" class="fas fa-th-list icsil"></i>
 </div>                    
-<div class="pula gitna">
-  <h1>UMALOHOKAN</h1>
+<div [ngSwitch]="widget.widgetType" class="pula gitna">
+  <div *ngSwitchCase="'HEADING'">
+    <div [ngSwitch]="widget.size">
+      <div *ngSwitchCase="1">
+        <h1>{{widget.text}}</h1>
+      </div>
+      <div *ngSwitchCase="2">
+        <h2>{{widget.text}}</h2>
+      </div>
+      <div *ngSwitchCase="3">
+        <h3>{{widget.text}}</h3>
+      </div>
+      <div *ngSwitchCase="4">
+        <h4>{{widget.text}}</h4>
+      </div>
+      <div *ngSwitchCase="5">
+        <h5>{{widget.text}}</h5>
+      </div>
+      <div *ngSwitchCase="6">
+        <h6>{{widget.text}}</h6>
+      </div>
+    </div>
+  </div>
+  <div *ngSwitchCase="'IMAGE'">
+    <img [src]="widget.url"[style.width]="widget.width" />
+  </div>
+  <div *ngSwitchCase="'YOUTUBE'">
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe [src]="parseYoutubeSrc(widget.url)" [style.width]="widget.width" allowfullscreen></iframe>
+    </div>
+  </div>
 </div>      
 <br>
-<div class="posicon">
-  <a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid"><i class="fas fa-cog icgold"></i></a>
-  <i routerLink="/user/:uid/website/:wid/page/:pid/widget" class="fas fa-th-list icsil"></i>
 </div>
-<div class="gitna">
-  <h3>27 Amazing Places To Visit In The Philippines In 2018</h3>
+<div class="extdown">  
 </div>
-<br>
-<!--IMAGE IS HERE-->
-<div class="posicon">
-  <a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid"><i class="fas fa-cog icgold"></i></a>
-  <i routerLink="/user/:uid/website/:wid/page/:pid/widget" class="fas fa-th-list icsil"></i>                
-</div>
-<div class="gitna">
-  <img class="img-fluid" src="https://images.trekeffect.com/blog-trekeffect/2016/01/GettyImages-578068546.png">
-</div>
-<br>
-<div class="posicon">
-  <a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid"><i class="fas fa-cog icgold"></i></a>
-  <i routerLink="/user/:uid/website/:wid/page/:pid/widget" class="fas fa-th-list icsil"></i>            
-</div>
-<div class="gitna">
-  <h5>
-      With over 7,000 gorgeous islands to choose from, planning a trip to the Philippines in 2018 can be a rather overwhelming and mind-boggling experience
-      for any traveler. From the breath-snatching, idyllic rolling hills of Batanes to the fabulous cascades of Lake Sebu, the Philippines
-      has a cornucopia of awe-inspiring destinations that are worthy of a traveler’s bucket list. Whether you’re a history buff or a
-      sun-kissed beach bum, you will find your bliss as well as ignite your innate sense of wanderlust in the Philippines.
-      <a href="https://trekeffect.com/travel-blog/22-amazing-places-to-visit-in-the-philippines-in-2016" target="_blank">READ MORE</a>
-  </h5>
-</div>
-<br>
-<div class="posicon">
-  <a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid"><i class="fas fa-cog icgold"></i></a>
-  <i routerLink="/user/:uid/website/:wid/page/:pid/widget" class="fas fa-th-list icsil"></i>
-</div>
-<div class="gitna">
-  <h3>Young Love, Complicated by Cancer</h3>
-</div>
-<br>
-<!--VIDEO IS HERE-->
-<div class="posicon">
-  <a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid"><i class="fas fa-cog icgold"></i></a>
-  <i routerLink="/user/:uid/website/:wid/page/:pid/widget" class="fas fa-th-list icsil"></i>                
-</div>
-<div class="embed-responsive embed-responsive-21by9 gitna">
-  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/9ItBvH5J6ss?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</div>
-<br>
-<div class="posicon">
-  <a routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid"><i class="fas fa-cog icgold"></i></a>
-  <i routerLink="/user/:uid/website/:wid/page/:pid/widget" class="fas fa-th-list icsil"></i>               
-</div>
-<div class="gitna">
-  <h5>
-      “The world is not a wish-granting factory.” That line, from “The Fault in Our Stars,” is undoubtedly true, and it is also true that the movie,
-      like the book before it, is an expertly built machine for the mass production of tears. Directed by Josh Boone (“Stuck in Love”) with
-      scrupulous respect for John Green’s best-selling young-adult novel, the film sets out to make you weep — not just sniffle or choke up a
-      little, but sob until your nose runs and your face turns blotchy. It succeeds.
-      <a href="https://www.nytimes.com/2014/06/06/movies/the-fault-in-our-stars-sets-out-to-make-you-cry.html" target="_blank">READ MORE</a>
-  </h5>
-</div>
-</div>
-<div class="extdown"></div>
 <!--FOOTER IS HERE-->
 <div>
 <nav class="navbar navbar-light pagedit fixed-bottom">
   <div class="usogbaba">
       <i class="fas fa-play gitnato float-left ibangkulay"></i>
       <i class="iconpadd float-left far fa-eye gitnato ibangkulay"></i>
-      <a class routerLink="/user/:uid"><i class="float-right fas fa-user ibangkulay"></i></a>
+      <a class routerLink="/user/{{uid}}"><i class="float-right fas fa-user ibangkulay"></i></a>
   </div>
 </nav>
 </div>     
