@@ -1,27 +1,27 @@
  <!--NAV-->   
  <div>
   <nav class="navbar pagedit">            
-      <a routerLink="/user/:uid/website/:wid/page"><i class="fas fa-chevron-left ibangkulay"></i></a>
-      <a class="ibangkulay" routerLink="/user/:uid/website/:wid/page/:pid"><b>Edit Page</b></a>
-      <a class="float-right ibangkulay" routerLink="/user/:uid/website/:wid/page"><i class="fas fa-check"></i></a>
+      <a routerLink="/user/{{uid}}/website/{{wid}}/page"><i class="fas fa-chevron-left ibangkulay"></i></a>
+      <a class="ibangkulay" routerLink="/user/{{uid}}/website/{{wid}}/page/{{pid}}"><b>Edit Page</b></a>
+      <button form="myForm" class="float-right ibangkulay btn bg-transparent" [disabled]="myForm.invalid" type="submmit"><i class="fas fa-check"></i></button>
   </nav>
 </div>
 <br>
 <!--FORM-->
 <div class="container">
-  <form>
+  <form id="myForm" #myForm="ngForm" (ngSubmit)="update()">
       <div class="form-group">
           <label for="Name"><b>Name</b></label>
-          <input class="form-control" type="text" value="Blog Post" id="Name">
+          <input required [(ngModel)]="page.name" class="form-control" type="text" id="name" name="name">
       </div>
       <div class="form-group">
           <label for="Title"><b>Title</b></label>
-          <input class="form-control" type="text" placeholder="Page Title" id="Title">    
+          <input [(ngModel)]="page.title" name="ttle" class="form-control" type="text" placeholder="Page Title" id="title">    
       </div>
       <br>
 <!--BUTTON-->
       <div>                                                                    
-          <a class="container btn btn-block btn-lg pula" routerLink="/user/:uid/website/:wid/page">Delete</a>
+          <button type="button" (click)="delete()" class="container btn btn-block btn-lg pula">Delete</button>
       </div>
   </form>
 </div>
@@ -29,7 +29,7 @@
 <div>
   <nav class="navbar navbar-light pagedit fixed-bottom">
       <div class="usogbaba ibangkulay">
-          <a class="float-right" routerLink="/user/:uid">
+          <a class="float-right" routerLink="/user/{{uid}}">
               <i class="fas fa-user ibangkulay"></i>
           </a>
       </div>
