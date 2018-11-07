@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WebsiteService } from 'src/app/services/website.service.client';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Website } from 'src/app/models/website.model.client';
 
 
 @Component({
@@ -10,10 +11,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class WebsiteEditComponent implements OnInit {
 
-  websites:any[];
+  websites: Website[];
   uid: string;
   wid: string;
-  website;
+  website: Website;
 
   constructor(
     private websiteService: WebsiteService,
@@ -31,7 +32,7 @@ export class WebsiteEditComponent implements OnInit {
     }
 
     update(){
-      const newWeb = {
+      const newWeb: Website = {
       name: this.website.name,
       description: this.website.description,
       _id: this.wid,
