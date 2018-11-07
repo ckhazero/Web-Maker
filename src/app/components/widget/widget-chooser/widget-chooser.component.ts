@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { WidgetService } from 'src/app/services/widget.sevice.client';
+import { Widget } from 'src/app/models/widget.model.client';
 
 @Component({
   selector: 'app-widget-chooser',
@@ -27,20 +28,22 @@ export class WidgetChooserComponent implements OnInit {
     });
   }
 
-  create(type){
-    const widget = {
+  create(type: string){
+    const widget: Widget = {
       widgetType: type,
       pageId: this.pid
     };
 
     this.widgetService.createWidget(widget);
 
-    const wgid = this.widgetService.widgets[
+    const wgid: string = this.widgetService.widgets[
       this.widgetService.widgets.length - 1]._id;
 
-    this.router.navigate(['user',
-    this.uid, 'website', this.wid,
-    'page', this.pid, 'widget', wgid])
+    this.router.navigate([
+      'user', this.uid,
+      'website', this.wid,
+      'page', this.pid,
+      'widget', wgid])
   }
 
 }
