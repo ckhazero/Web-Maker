@@ -30,8 +30,14 @@ export class WidgetHeadingComponent implements OnInit {
     });
   }
 
-  update(){}
+  update(){
+    this.widgetService.updateWidget(this.widget);
+    this.router.navigate(["user", this.uid, "website", this.pid,"page", this.pid, "widget"])
+  }
 
-  delete(){}
+  delete(){
+    this.widgetService.deleteWidget(this.wgid);
+    this.router.navigate(["user", this.uid, "website", this.pid,"page", this.pid, "widget"])
+  }
 
 }

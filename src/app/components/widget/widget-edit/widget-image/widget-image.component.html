@@ -2,35 +2,35 @@
   <!--NAV-->
   <div>
       <nav class="navbar pagedit">            
-        <a routerLink="/user/:uid/website/:wid/page/:pid/widget"><i class="fas fa-chevron-left ibangkulay"></i></a>
-        <a class="ibangkulay" routerLink="/user/:uid/website/:wid/page/:pid/widget/:wgid"><b>Widget Edit</b></a>
-        <a class="float-right ibangkulay" routerLink="/user/:uid/website/:wid/page/:pid/widget"><i class="fas fa-check"></i></a>
+        <a routerLink="/user/{{uid}}/website/{{wid}}/page/{{pid}}/widget"><i class="fas fa-chevron-left ibangkulay"></i></a>
+        <a class="ibangkulay" routerLink="/user/{{uid}}/website/{{wid}}/page/{{pid}}/widget/{{wgid}}"><b>Widget Edit</b></a>
+        <button class="float-right ibangkulay btn bg-transparent" form="myForm" type="submit"><i class="fas fa-check"></i></button>
       </nav>
   </div>
   </div>
   <br>
 <!--FORM IS HERE-->
   <div class="container">
-      <form>
+      <form id="myForm" #myForm="ngForm" (ngSubmit)="update()">
           <div class="form-group">
               <label for="Name"><b>Name</b></label>
-              <input class="form-control" type="text" placeholder="Name" id="Name">
+              <input [(ngModel)]="widget.name" name="name" class="form-control" type="text" placeholder="Image Name" id="Name">
           </div>
           <div class="form-group">
               <label for="Text"><b>Text</b></label>
-              <input class="form-control" type="text" placeholder="Text" id="Text">    
+              <input [(ngModel)]="widget.text" name="text" class="form-control" type="text" placeholder="Image Text" id="Text">    
           </div>
           <div class="form-group">
               <label for="URL"><b>URL</b></label>
-              <input class="form-control" type="url" placeholder="URL" id="URL">    
+              <input [(ngModel)]="widget.url" name="url" class="form-control" type="url" placeholder="Image Url" id="URL">    
           </div>
           <div class="form-group">
               <label for="Width"><b>Width</b></label>
-              <input class="form-control" type="text" placeholder="Width" id="Width">    
+              <input [(ngModel)]="widget.width" name="width" class="form-control" type="text" placeholder="Image Width" id="Width">    
           </div>                                
           <div class="form-group">
               <label for="Upload"><b>Upload</b></label>
-              <input class="form-control" type="file" placeholder="width" id="Upload">    
+              <input class="form-control" type="file" placeholder="" id="Upload">    
           </div>                    
       </form>
   </div>
@@ -38,20 +38,24 @@
   <!--BUTTON IS HERE-->
   <div class="container">
       <div>
-          <a routerLink="/user/:uid/website/:wid/page/:pid/widget" id="allreg" class="btn btn-block btn-lg">Upload</a>
+          <a routerLink="/user/{{uid}}/website/{{wid}}/page/{{pid}}/widget" id="allreg" class="btn btn-block btn-lg">Upload</a>
       </div>
       <br>                                                                                                      
       <div>
-          <a class="btn btn-block btn-lg pula" routerLink="/user/:uid/website/:wid/page/:pid/widget">Delete</a>
+          <button type="button" (click)="delete()" class="btn btn-block btn-lg pula">Delete</button>
       </div>
   </div>
   <!--FOOTER IS HERE-->
   <div>   
       <nav class="navbar navbar-light pagedit fixed-bottom">
           <div class="usogbaba ibangkulay">
-              <a class="float-right" routerLink="/user/:uid">
+              <a class="float-right" routerLink="/user/{{uid}}">
                   <i class="fas fa-user ibangkulay"></i>
               </a>
           </div>
       </nav>     
   </div>
+  <br>
+  <br>
+  <br>
+  
