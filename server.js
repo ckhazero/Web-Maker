@@ -58,6 +58,8 @@ app.set('port', port);
 
 const server = http.createServer(app);
 
+require("./server/app")(app);
+
 
 // For Build: Catch all other routes and return the index file -- BUILDING
 

@@ -13,7 +13,13 @@ export class ProfileComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute, private userService: UserService) { }
 
   uid: string;
-  user: User;
+  user: User = {
+    username: "",
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: ""
+  };
   oldUsername: string;
   userError: boolean;
   successFlag: boolean;
@@ -22,27 +28,35 @@ export class ProfileComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.params.subscribe(params =>{
       this.uid = params["uid"];
-      this.user = this.userService.findUserById(this.uid);
+      this.userService.findUserById(this.uid).subscribe(
+        (user: User) => {
+          this.user = user;
       this.oldUsername = this.user.username;
     });
+  });
   }
 
   update(){
-    if (this.user.username === this.oldUsername){
-      this.userError = false;
-      this.successFlag = true;
-      this.userService.updateUser(this.user);
+    if (this.user.username === this.oldUsername){      
+      this.userService.updateUser(this.user).subscribe(
+        (user: User) => {
+          this.userError = false;
+          this.successFlag = true;
+        });
     } else {
-      const user: User = this.userService.findUserByUsername(this.user.username);
-      if(user){
-        this.userError = true;
-        this.successFlag = false;        
-      } else {
-        this.userError = false;
-        this.successFlag = true;
-        this.userService.updateUser(this.user);
-      }
+        this.userService.findUserByUsername(this.user.username).subscribe(
+          (user: User) => {
+            this.userError = true;
+            this.successFlag = false;
+          },
+          (error: any) => {
+            this.userService.updateUser(this.user).subscribe(
+              (user: User) => {
+                this.userError = false;
+                this.successFlag = true;
+              });
+          }
+        );
     }
   }
-
 }

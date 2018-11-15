@@ -12,7 +12,7 @@
       <div *ngIf="successFlag" class="alert alert-success">Updated Successfully!</div>
       <div class="form-group">
           <label for="Username"><b>Username</b></label>
-          <input #userInput="ngModel" required [(ngModel)]="user.username" name="username" class="form-control" type="text" placeholder="Enter Username" id="Username">
+          <input #userInput="ngModel" required [(ngModel)]="user.username" name="username" class="form-control" type="text" placeholder="Enter Username" id="username">
       </div>
       <div *ngIf="userInput.invalid" class="alert alert-warning">username cannot be empty</div>
       <div class="form-group">
