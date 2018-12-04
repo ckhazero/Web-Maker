@@ -24,6 +24,7 @@ function updatePage(pid, page){
     return PageModel.update({ _id: pid }, page);
 }
 
+
 function deletePage(pid){
     return PageModel.remove({ _id: pid });
 }
