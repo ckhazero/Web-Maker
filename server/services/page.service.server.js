@@ -13,13 +13,6 @@ module.exports = function(app){
     // Delete Page
     app.delete("/api/page/:pid", deletePage);
 
-    pages = [
-        { name: "Post 1", websiteId: "456", title: "Lorem" },      
-        { name: "Post 2", websiteId: "456", title: "Lorem" },      
-        { name: "Post 3", websiteId: "456", title: "Lorem" }
-      
-      ];
-
       async function createPage(req, res){
           let page = req.body;
           const data = await
