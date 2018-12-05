@@ -36,7 +36,7 @@ export class WidgetListComponent implements OnInit {
 
   parseYoutubeSrc(src) {
     //Transfer video url into embeded video url
-    let embedUrl: string = "http://www.youtube.com/embed/";
+    let embedUrl: string = "https://www.youtube.com/embed/";
     const splitUrl: string[] = src.split("/");
     embedUrl += splitUrl[splitUrl.length - 1];
 
