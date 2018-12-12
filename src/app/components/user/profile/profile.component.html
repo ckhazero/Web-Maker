@@ -33,7 +33,9 @@
       </div>
       <br>
       <div>
-          <a routerLink="/login" class="container kans btn btn-block">Log Out</a>
+          <button type="button" (click)="logout()" class="container kans btn btn-block">Log Out</button>
+          <br>
+          <a *ngIf="user.admin" class="btn btn-outline-dark" routerLink="/user-list">User List</a>
       </div>
   </form>
 </div>
@@ -41,7 +43,7 @@
 <div>
   <nav class="navbar navbar-light navtaas fixed-bottom">
       <div class="usogbaba">
-          <a class="float-right" routerLink="/user/{{uid}}"><i class="fas fa-user putinglogo"></i></a>
+          <a  class="float-right" routerLink="/profile"><i class="fas fa-user putinglogo"></i></a>
       </div>
   </nav>               
 </div>

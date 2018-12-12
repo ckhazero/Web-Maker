@@ -23,6 +23,10 @@ import { UserService } from "./services/user.service.client"
 import { WebsiteService } from './services/website.service.client';
 import { PageService } from './services/page.service.client';
 import { WidgetService } from './services/widget.sevice.client';
+import { SharedService } from './services/shared.service.client';
+import { AuthGuard } from './services/auth-guard.service.client';
+import { UserListComponent } from './components/user/user-list/user-list.component';
+import { AdminGuard } from './services/admin.guard.service.client';
 
 @NgModule({
   declarations: [
@@ -41,10 +45,11 @@ import { WidgetService } from './services/widget.sevice.client';
     WidgetEditComponent,
     WidgetHeadingComponent,
     WidgetImageComponent,
-    WidgetYoutubeComponent
+    WidgetYoutubeComponent,
+    UserListComponent
   ],
   imports: [BrowserModule, Routing, FormsModule, HttpModule],
-  providers: [UserService, WebsiteService, PageService, WidgetService],
+  providers: [UserService, WebsiteService, PageService, WidgetService, SharedService, AuthGuard, AdminGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
